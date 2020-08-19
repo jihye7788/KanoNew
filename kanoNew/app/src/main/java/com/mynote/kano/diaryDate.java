@@ -1,4 +1,4 @@
-package com.mynote.kano.firebase.calendar;
+package com.mynote.kano;
 
 import android.os.Parcel;
 import android.os.Parcelable;

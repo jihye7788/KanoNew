@@ -1,4 +1,4 @@
-package com.mynote.kano.vo;
+package com.mynote.kano;
 
 import com.google.firebase.database.Exclude;
 import com.google.firebase.database.IgnoreExtraProperties;

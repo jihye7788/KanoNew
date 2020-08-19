@@ -1,16 +1,21 @@
 package com.mynote.kano.gitSource;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
+import android.widget.TextView;
 
 import com.apollographql.apollo.ApolloCall;
 import com.apollographql.apollo.ApolloClient;
 import com.apollographql.apollo.api.Response;
 import com.apollographql.apollo.exception.ApolloException;
+import com.mynote.kano.CommitActivity;
 import com.mynote.kano.GetCommitQuery;
-import com.mynote.kano.R;
+import com.mynote.kano.calendarActivity;
 import com.mynote.kano.gitSource.gitConnection.GitConnectApplication;
+import com.mynote.kano.R;
 
 public class WhenGetCommitList extends AppCompatActivity {
 
@@ -39,10 +44,25 @@ public class WhenGetCommitList extends AppCompatActivity {
                 Log.e("error", e.toString(), e);
             } finally {
                 //text 세팅하는 방법 - 예시
-/*                TextView textView = findViewById(R.id.textView3);*/
-/*                textView.setText(dataString);*/
+                TextView textView = findViewById(R.id.textView3);
+                textView.setText(dataString);
             }
         }
+    }
+
+
+    public void goCommit(View V){
+//        Intent intent = new Intent(getApplicationContext(),CommitActivity.class);
+        Intent intent2 = new Intent(this, CommitActivity.class);
+        startActivityForResult(intent2,1001);
+        finish();
+    }
+    public void goDatepick(View v) {
+//        Intent intent = new Intent(getApplicationContext(),calendarActivity.class);
+        Intent intent = new Intent(this, calendarActivity.class);
+        startActivity(intent);
+        finish();
+
     }
 
     //CommitList

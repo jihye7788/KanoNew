@@ -11,49 +11,27 @@
         android:theme="@style/AppTheme"
         >
 
-        <activity android:name=".gitSource.WhenGetCommitList"/>
+        <activity android:name=".gitSource.WhenGetCommitList">
+        </activity>
+
+        <activity android:name=".gitSource.WhenGetDirectory"></activity>
+
+        <activity android:name=".CListActivity"></activity>
+        <activity android:name=".CommitActivity" />
 
         <activity
-            android:name=".firebase.login.SignInOutActivity"
-            android:launchMode="singleTask">
-        </activity>
-
+            android:name=".calendarActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".firebase.login.RedirectedActivity"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-
-                <data android:scheme="kano" />
-            </intent-filter>
-        </activity>
-
-        <activity android:name=".firebase.login.MainActivity">
-        </activity>
-
-        <activity android:name=".fileDirectory.WhenGetDirectory">
+            android:name=".write_diaryActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".CListActivity"/>
-
-        <activity android:name=".CommitActivity" />
-
-        <activity
-            android:name=".firebase.calendar.calendarActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".firebase.calendar.write_diaryActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
-
-        <activity android:name=".fileDirectory.dListActivity"/>
-        <activity android:name=".fileDirectory.FileDirectory"/>
     </application>
+
 </manifest>
